@@ -1,0 +1,14 @@
+﻿@model PersonelTakipMVC.Models.DTOs.DepartmanDto
+<h2>Departman Güncelle</h2>
+
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id"/>
+    <div class="form-group">
+        <label>Departman Adı</label>
+        <input asp-for="DepartmanAdi" class="form-control"/>
+        <span asp-validation-for="DepartmanAdi" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Güncelle</button>
+    <button type="Index" class="btn btn-secondary mt-2">Geri</button>
+</form>

@@ -1,0 +1,30 @@
+﻿@model List<PersonelTakipMVC.Models.DTOs.PersonelDto>
+
+<h2>Bugün Doğan Personeller</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info">Bugün doğan personel yok</div>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Doğum Tarihi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Ad</td>
+                    <td>@item.Soyad</td>
+                    <td>@item.DogumTarihi.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

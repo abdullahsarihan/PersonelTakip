@@ -1,0 +1,34 @@
+﻿@model PersonelTakipMVC.Models.DTOs.PersonelDto
+
+<h2>Personel Güncelle</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id"/>
+    <div class="form-group">
+        <label>Ad</label>
+        <input asp-for="Ad" class="form-control"/>
+        <span asp-validation-for="Ad" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Soyad</label>
+        <input asp-for="Soyad" class="form-control"/>
+        <span asp-validation-for="Soyad" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control"/>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label>DogumTarihi</label>
+        <input asp-for="DogumTarihi" class="form-control"/>
+        <span asp-validation-for="DogumTarihi" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Departman</label>
+        <select asp-for="DepartmanId" asp-items="Model.Departmanlar" class="form-control"></select>
+        <span asp-validation-for="DepartmanId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Güncelle</button>
+    <a asp-action="Index" class="btn btn-secondary mt-2">İptal</a>
+</form>

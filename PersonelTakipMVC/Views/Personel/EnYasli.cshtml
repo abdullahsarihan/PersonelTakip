@@ -1,0 +1,13 @@
+﻿@model PersonelTakipMVC.Models.DTOs.PersonelDto
+
+<h2>En Yaşlı Personel</h2>
+
+<div class="card mt-3">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Ad @Model.Soyad</h5>
+        @* <p class="card-text"><<strong>Departman:</strong>@Model.DepartmanAdi</p> *@
+        <p class="card-text"><strong>Email:</strong>@Model.Email</p>
+        <p class="card-text"><strong>Doğum Tarihi:</strong>@Model.DogumTarihi.ToShortDateString()</p>
+    </div>
+</div>
+<a asp-action="Index" class="btn btn-secondary mt-3">Geri Dön</a>

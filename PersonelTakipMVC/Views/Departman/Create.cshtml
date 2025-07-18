@@ -1,0 +1,14 @@
+﻿@model PersonelTakipMVC.Models.DTOs.DepartmanDto
+
+<h2>Departman Ekle</h2>
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label>Departman Adı</label>
+        <input asp-for="DepartmanAdi" class="form-control"/>
+        <span asp-validation-for="DepartmanAdi" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success mt-2">Kaydet</button>
+    <button type="Index" class="btn btn-secondary mt-2">Geri</button>
+</form>
